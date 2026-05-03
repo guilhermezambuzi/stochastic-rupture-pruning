@@ -56,6 +56,25 @@ SRP is grounded in the Stochastic Rupture (SR) framework (Zambuzi, 2026), which 
 Guilherme Zambuzi — Independent Researcher  
 Thanks to Viswak R. Balaji and Samuel Punch (University College Cork) for circuit-level simulations of the SR framework in Qiskit (arXiv:2508.10590).
 
+## Cross-Architecture Validation: DeepSeek-R1-Distill-Qwen-1.5B
+
+SRP was also tested on a modern model with Grouped Query Attention (28 layers, 12 Q heads, 2 KV heads):
+
+| η | DeepSeek PPL | Delta | GPT-2 small (reference) |
+|---|---|---|---|
+| baseline | 646.69 | — | 356.60 |
+| 0.90 | 593.92 | **−8.2%** | +8.0% |
+| 0.75 | 548.50 | **−15.2%** | +13.2% |
+| 0.60 | 696.08 | +7.6% | +14.9% |
+| 0.50 | 1084.00 | +67.6% | +18.6% |
+| 0.40 | 3743.25 | +478.8% | +51.1% |
+
+**Key findings:**
+
+- **Modern models are more resilient to mild SRP** — at η=0.75, DeepSeek perplexity actually decreases by 15.2%, suggesting prunable redundancy in deeper architectures.
+- **Phase transition is sharper** — DeepSeek transitions from 67.6% to 478.8% (×7), versus GPT-2's ×2.7. The discontinuous behavior predicted by the SR framework is more pronounced in deeper transformers.
+- **Sweet spot shifts** — optimal η for DeepSeek is around 0.75, versus 0.60 for GPT-2.
+
 ## License
 
 Apache 2.0
