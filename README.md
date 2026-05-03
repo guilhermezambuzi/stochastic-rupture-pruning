@@ -54,7 +54,7 @@ SRP is grounded in the Stochastic Rupture (SR) framework (Zambuzi, 2026), which 
 ## Author
 
 Guilherme Zambuzi — Independent Researcher  
-Thanks to Viswak R. Balaji and Samuel Punch (University College Cork) for computational validation of the SR framework.
+Thanks to Viswak R. Balaji and Samuel Punch (University College Cork) for circuit-level simulations of the SR framework in Qiskit (arXiv:2508.10590).
 
 ## License
 
