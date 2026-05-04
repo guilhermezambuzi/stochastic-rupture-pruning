@@ -137,7 +137,7 @@ python srp_deepseek.py
 
 ## Paper
 
-Zambuzi, G. (2026). *Stochastic Rupture Pruning: Empirical Validation of Informational Saturation as an Adaptive Compute Bound for Transformer Inference*. Zenodo. *(DOI pending)*
+Zambuzi, G. (2026). *Stochastic Rupture Pruning: Empirical Validation of Informational Saturation as an Adaptive Compute Bound for Transformer Inference*. Zenodo. https://doi.org/10.5281/zenodo.20017810
 
 ## Acknowledgements
 
